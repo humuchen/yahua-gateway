@@ -1,0 +1,12 @@
+<script setup lang="ts">
+import Footer from './Footer.vue';
+import Header from './Header.vue';
+import ToolBar from './ToolBar.vue';
+</script>
+
+<template>
+  <Header />
+  <RouterView />
+  <Footer />
+  <ToolBar />
+</template>
