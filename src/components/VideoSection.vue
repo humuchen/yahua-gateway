@@ -20,7 +20,15 @@ export default {
 </script> -->
 
 <template>
-  <div class="video-carousel" style="--swiper-pagination-bullet-width:4.4rem;--swiper-pagination-bullet-height:0.2rem;--swiper-pagination-bullet-border-radius:0;--swiper-pagination-bullet-inactive-color:hsla(0, 0%, 100%, 0.3)">
+  <div
+    class="video-carousel"
+    style="
+      --swiper-pagination-bullet-width: 4.4rem;
+      --swiper-pagination-bullet-height: 0.2rem;
+      --swiper-pagination-bullet-border-radius: 0;
+      --swiper-pagination-bullet-inactive-color: hsla(0, 0%, 100%, 0.3);
+    "
+  >
     <swiper
       :modules="[Autoplay, EffectFade, Navigation, Pagination]"
       :autoplay="{ delay: 8000, disableOnInteraction: false }"
@@ -60,15 +68,15 @@ import 'swiper/css/pagination';
 
 const videos = [
   {
-    src: "https://xps02.xiaopeng.com/cms/material/video/2023/01-06/video_20230106135720_85074.mp4",
+    src: 'https://s.xiaopeng.com/xp-fe/mainsite/2023/home/explore-v2.mp4',
     title: '科技创新，启航未来'
   },
   {
-    src: "https://xps02.xiaopeng.com/cms/material/video/2023/06-29/video_20230629100416_00416.mp4",
+    src: 'https://www.tesla.com/sites/default/files/videos/Plaid-Range-Web-Desktop-8mb.mp4',
     title: '探索智能，连接世界'
   },
   {
-    src: "https://xps02.xiaopeng.com/cms/material/video/2023/04-07/video_20230407174751_66984.mp4",
+    src: 'https://xps02.xiaopeng.com/cms/material/video/2023/04-07/video_20230407174751_66984.mp4',
     title: '创意视觉，展现无限'
   }
 ];
@@ -95,17 +103,19 @@ const videos = [
 
 .video-overlay {
   position: absolute;
-  inset: 0;
-  display: flex;
+  top: 30%;
+  left: 15%;
+  /* inset: 0; */
+  /* display: flex;
   justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.25);
+  align-items: center; */
+  /* background: rgba(0, 0, 0, 0.25); */
 }
 
 .video-title {
   color: #fff;
-  font-size: 2rem;
+  font-size: 3.2rem;
+  letter-spacing: 0.6rem;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
-
 </style>

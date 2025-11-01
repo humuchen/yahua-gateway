@@ -27,7 +27,7 @@ const sphereGroup = new THREE.Group();
 onMounted(() => {
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(
-    70,
+    90,
     window.innerWidth / window.innerHeight,
     0.1,
     1000
@@ -42,7 +42,7 @@ onMounted(() => {
 
   // 多张图片纹理
   const textureLoader = new THREE.TextureLoader();
-  const imageCount = 20;
+  const imageCount = 50;
   const radius = 100;
 
   for (let i = 0; i < imageCount; i++) {
@@ -54,6 +54,7 @@ onMounted(() => {
     const phi = Math.acos(-1 + (2 * i) / imageCount);
     const theta = Math.sqrt(imageCount * Math.PI) * phi;
     mesh.position.setFromSphericalCoords(radius, phi, theta);
+
     mesh.lookAt(0, 0, 0);
     sphereGroup.add(mesh);
   }
@@ -68,13 +69,15 @@ onMounted(() => {
   const mouse = new THREE.Vector2();
 
   function onClick(event) {
-    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-    mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+    const rect = renderer.domElement.getBoundingClientRect();
+    mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+    mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
     raycaster.setFromCamera(mouse, camera);
     const intersects = raycaster.intersectObjects(sphereGroup.children);
     if (intersects.length > 0) {
       const clicked = intersects[0].object;
-      emit('image-click', clicked.material.map.image.src);
+      const img = clicked.material.map.image;
+      emit('image-click', img.src);
     }
   }
   window.addEventListener('click', onClick);
