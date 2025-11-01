@@ -6,6 +6,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd());
   const getViteEnv = (target: string): any => env[target];
   return {
+    base: '/yahua/',
     plugins: [vue()],
     server: {
       open: true // 启动后自动打开浏览器
