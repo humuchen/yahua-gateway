@@ -20,9 +20,6 @@ export default defineConfig(({ mode }) => {
         getViteEnv('VITE_CLEAR_LOG') === '1'
           ? ['alert', 'console.log', 'console.warn', 'debugger']
           : []
-    },
-    build: {
-      outDir: 'docs'
     }
   };
 });
