@@ -11,7 +11,7 @@ const router = createRouter({
       children: [
         {
           path: '/',
-          component: () => import('@/views/Home.vue')
+          component: () => import('@/views/home.vue')
         },
         ...itemRoutes
       ]
