@@ -23,9 +23,16 @@ body,
   height: 100%;
   margin: 0;
 }
-html {
-  font-size: max(0.4vw, 10px);
+
+html{
+  font-size: clamp(14px, 1vw + 8px, 16px);
 }
+
+/* @media (min-width: 768px) {
+  html {
+    font-size: max(0.7vw, 12px);
+  }
+} */
 
 .page {
   min-height: 100vh;

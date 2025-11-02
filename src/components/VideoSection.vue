@@ -55,7 +55,6 @@
 import * as Swiper from '@/components/Swiper';
 import { ref } from 'vue';
 import Grid from '@/components/Grid/Grid.vue';
-import XIcon from '@/components/Icons/X.vue';
 
 const videos = [
   {
