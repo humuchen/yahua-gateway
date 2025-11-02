@@ -1,24 +1,3 @@
-<!-- <template>
-  <div class='video-wrapper'>
-    <video ref='video' playsinline muted loop autoplay :poster='poster' style='width:100%;height:100%;object-fit:cover;border-radius:8px'>
-      <source :src='videoSrc' type='video/mp4' />
-      您的浏览器不支持 video 标签。
-    </video>
-  </div>
-</template>
-
-<script>
-import { ref } from 'vue'
-export default {
-  setup() {
-    const videoSrc = '/src/assets/video/sample.mp4'
-    const poster = '/src/assets/images/poster.jpg'
-    const video = ref(null)
-    return { videoSrc, poster, video }
-  }
-}
-</script> -->
-
 <template>
   <div
     class="video-carousel"

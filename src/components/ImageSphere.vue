@@ -62,7 +62,10 @@ onMounted(() => {
   scene.add(sphereGroup);
 
   const controls = new OrbitControls(camera, renderer.domElement);
-  controls.enableZoom = false;
+  const isTouchDevice =
+    'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+  controls.enableZoom = isTouchDevice;
 
   // Raycaster 点击检测
   const raycaster = new THREE.Raycaster();

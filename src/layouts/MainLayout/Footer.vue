@@ -28,10 +28,7 @@ const visible = computed(() => !paths.includes(route.path));
           <a href="https://beian.miit.gov.cn">苏ICP备13040026号</a>
         </div>
         <div>
-          <a
-            href="https://xps01.xiaopeng.com/cms/material/pic/2020/09-04/pic_20200904111924_34980.jpg"
-            >营业执照</a
-          >
+          <a href="">营业执照</a>
         </div>
       </div>
     </div>
@@ -40,11 +37,7 @@ const visible = computed(() => !paths.includes(route.path));
       <div class="top">
         <div class="media-info">
           <div>
-            <a
-              class="media-item"
-              href="https://weibo.com/p/1006065710264970/home?from=page_100606&amp;mod=TAB#place"
-              target="_blank"
-            >
+            <a class="media-item" href="" target="_blank">
               <img
                 src="https://xps01.xiaopeng.com/www/public/img/weibo.abf3e4c3.svg"
                 alt=""
@@ -59,16 +52,12 @@ const visible = computed(() => !paths.includes(route.path));
               />
             </a>
             <div class="weixin-popover">
-              <div>微信小程序</div>
-              <img
-                class="image-qrcode"
-                src="https://s.xiaopeng.com/xp-fe/mini/common/qr-code-1649402059.png"
-                alt=""
-              />
+              <div>微信</div>
+              <img class="image-qrcode" src="" alt="" />
             </div>
           </div>
         </div>
-        <div>亚华客服中心：<a href="tel:400-819-3388">400-819-3388</a></div>
+        <div>亚华客服中心：<a href="tel:0513-80779670">0513-80779670</a></div>
       </div>
     </div>
   </div>
