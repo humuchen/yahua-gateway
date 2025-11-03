@@ -1,7 +1,7 @@
 <template>
   <div class="header" :class="{ 'dark-theme': isDarkTheme }">
     <RouterLink to="/">
-      <Logo fill="#fff" style="width: 3.5rem; height: 1.8rem" />
+      <Logo />
     </RouterLink>
 
     <div class="menus">
@@ -32,9 +32,23 @@
 import Logo from '@/components/Icons/Logo.vue';
 import { menus, subMenus } from './const.ts';
 import { useDarkTheme, useVisible } from './helpers.ts';
+import { watch } from 'vue';
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
 
 const [isVisible, onVisibleChange] = useVisible();
 const isDarkTheme = useDarkTheme(isVisible);
+const paths = ['/service'];
+
+watch(
+  () => route.path,
+  (val: string) => {
+    if (paths.includes(val)) {
+      onVisibleChange(true);
+    }
+  }
+);
 </script>
 
 <style scoped>

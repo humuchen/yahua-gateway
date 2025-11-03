@@ -4,7 +4,7 @@ import { useRoute } from 'vue-router';
 import { footerLinks } from './const.ts';
 
 const route = useRoute();
-const paths = ['/stores'];
+const paths = ['/service'];
 const visible = computed(() => !paths.includes(route.path));
 </script>
 

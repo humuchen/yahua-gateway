@@ -1,6 +1,11 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 
-const itemRoutes: RouteRecordRaw[] = [];
+const itemRoutes: RouteRecordRaw[] = [
+  {
+    path: '/service',
+    component: () => import('@/views/Service/index.vue')
+  }
+];
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

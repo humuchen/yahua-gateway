@@ -13,7 +13,7 @@ export const menus = [
   },
   {
     name: '服务中心',
-    href: ''
+    href: '/service'
   },
   {
     name: '加入我们',
