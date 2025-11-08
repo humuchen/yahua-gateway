@@ -55,10 +55,11 @@
 import * as Swiper from '@/components/Swiper';
 import { ref } from 'vue';
 import Grid from '@/components/Grid/Grid.vue';
+import video1 from '../../public/image/video1.mp4';
 
 const videos = [
   {
-    src: 'https://s.xiaopeng.com/xp-fe/mainsite/2023/home/explore-v2.mp4',
+    src: video1,
     title: '科技创新，启航未来'
   },
   {
