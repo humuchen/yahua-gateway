@@ -3,7 +3,7 @@
     id="join"
     title="亚华化工装备"
     subtitle="致力于化工装备 大型钢结构件的制造及开发"
-    src="http://yhhgzb.com/templates/me/images/index_pic/banner2.jpg"
+    :src="bannerPic"
   />
 
   <div class="job-module">
@@ -67,6 +67,7 @@ import CardSwiper from '@/components/CardSwiper/CardSwiper.vue';
 import Grid from '@/components/Grid/Grid.vue';
 import ScalableImage from '@/components/ScalableImage/ScalableImage.vue';
 import { jobs, jiazhiguan, guanhuai, contents } from './resources';
+import bannerPic from '@/assets/images/banner2.jpg';
 </script>
 
 <style scoped>
