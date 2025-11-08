@@ -17,7 +17,7 @@ export const menus = [
   },
   {
     name: '加入我们',
-    href: ''
+    href: '/join'
   }
 ];
 

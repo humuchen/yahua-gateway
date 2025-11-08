@@ -56,18 +56,20 @@ import * as Swiper from '@/components/Swiper';
 import { ref } from 'vue';
 import Grid from '@/components/Grid/Grid.vue';
 import video1 from '../../public/image/video1.mp4';
+import video2 from '../../public/image/video2.mp4';
+import video3 from '../../public/image/video3.mp4';
 
 const videos = [
   {
-    src: video1,
+    src: video3,
     title: '科技创新，启航未来'
   },
   {
-    src: 'https://www.tesla.com/sites/default/files/videos/Plaid-Range-Web-Desktop-8mb.mp4',
+    src: video2,
     title: '探索智能，连接世界'
   },
   {
-    src: 'https://xps02.xiaopeng.com/cms/material/video/2023/04-07/video_20230407174751_66984.mp4',
+    src: video1,
     title: '创意视觉，展现无限'
   }
 ];

@@ -1,14 +1,14 @@
 <script setup lang="ts">
 withDefaults(
   defineProps<{
-    src: string
-    alt?: string
-    scale?: number
+    src: string;
+    alt?: string;
+    scale?: number;
   }>(),
   {
     scale: 1.2
   }
-)
+);
 </script>
 
 <template>
@@ -22,6 +22,7 @@ withDefaults(
 .img-wrapper {
   border-radius: 0.4rem;
   overflow: hidden;
+  position: relative;
 
   :is(video),
   :is(img) {

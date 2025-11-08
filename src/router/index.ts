@@ -4,6 +4,10 @@ const itemRoutes: RouteRecordRaw[] = [
   {
     path: '/service',
     component: () => import('@/views/Service/index.vue')
+  },
+  {
+    path: '/join',
+    component: () => import('@/views/Join/index.vue')
   }
 ];
 

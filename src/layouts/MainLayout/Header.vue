@@ -32,19 +32,22 @@
 import Logo from '@/components/Icons/Logo.vue';
 import { menus, subMenus } from './const.ts';
 import { useDarkTheme, useVisible } from './helpers.ts';
-import { watch } from 'vue';
+import { computed, watch } from 'vue';
 import { useRoute } from 'vue-router';
 
 const route = useRoute();
 
 const [isVisible, onVisibleChange] = useVisible();
 const isDarkTheme = useDarkTheme(isVisible);
-const paths = ['/service'];
+const paths = computed(() => menus.map((m) => m.href));
 
 watch(
   () => route.path,
   (val: string) => {
-    onVisibleChange(paths.includes(val));
+    onVisibleChange(paths.value.includes(val));
+  },
+  {
+    immediate: true
   }
 );
 </script>
