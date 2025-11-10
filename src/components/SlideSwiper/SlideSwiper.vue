@@ -1,43 +1,43 @@
 <script setup lang="ts">
-import TabsBar from '@/components/TabsBar/TabsBar.vue'
-import useLast from '@/hooks/useLast.ts'
-import { ref, watch } from 'vue'
-import ArrowLeft from './arrow-left.svg'
-import ArrowRight from './arrow-right.svg'
-import useIndexSwitch from './useIndexSwitch.ts'
+import TabsBar from '@/components/TabsBar/TabsBar.vue';
+import useLast from '@/hooks/useLast.ts';
+import { ref, watch } from 'vue';
+import ArrowLeft from './arrow-left.svg';
+import ArrowRight from './arrow-right.svg';
+import useIndexSwitch from './useIndexSwitch.ts';
 
 const props = defineProps<{
   options: {
-    title: string
-    description: string
-    src: string
-  }[]
-}>()
+    title: string;
+    description: string;
+    src: string;
+  }[];
+}>();
 
-const current = ref(0)
-const isNext = ref(true)
-const last = useLast(current)
+const current = ref(0);
+const isNext = ref(true);
+const last = useLast(current);
 
 const { toPrev, toNext, goTo } = useIndexSwitch({
   count: props.options.length,
   current,
   isNext
-})
+});
 
-const offsetX = ref(0)
+const offsetX = ref(0);
 watch(
   () => current.value,
   () => {
     function render() {
-      if (offsetX.value === 0) return
-      offsetX.value += (isNext.value ? -1 : 1) * 4
-      requestAnimationFrame(render)
+      if (offsetX.value === 0) return;
+      offsetX.value += (isNext.value ? -1 : 1) * 4;
+      requestAnimationFrame(render);
     }
 
-    offsetX.value = (isNext.value ? 1 : -1) * 100
-    render()
+    offsetX.value = (isNext.value ? 1 : -1) * 100;
+    render();
   }
-)
+);
 </script>
 
 <template>
@@ -79,7 +79,7 @@ watch(
 
 <style scoped>
 .slide-swiper {
-  width: 96rem;
+  width: 80rem;
   margin: auto;
   padding: 12rem 0;
 

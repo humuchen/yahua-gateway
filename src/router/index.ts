@@ -2,6 +2,18 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 
 const itemRoutes: RouteRecordRaw[] = [
   {
+    path: '/about',
+    component: () => import('@/views/About/index.vue')
+  },
+  {
+    path: '/honor',
+    component: () => import('@/views/Honor/index.vue')
+  },
+  {
+    path: '/product',
+    component: () => import('@/views/Product/index.vue')
+  },
+  {
     path: '/service',
     component: () => import('@/views/Service/index.vue')
   },

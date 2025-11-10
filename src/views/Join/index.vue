@@ -9,7 +9,7 @@
   <div class="job-module">
     <div class="job-module-wrapper">
       <div class="job-module-title">
-        <span class="text">「探索你感兴趣的职位板块」</span>
+        <span class="text">探索你感兴趣的职位板块</span>
       </div>
       <div class="job-module-content">
         <div class="job-card" v-for="item in jobs" :key="item.title">
@@ -29,14 +29,14 @@
   </div>
 
   <BasicComponentSection
-    title="「亚华价值观」"
+    title="亚华价值观"
     desc="亚华同学们在面临选择时，心中的准则和信念；也是亚华内部个人或组织行为的内在驱动力。"
   >
     <SlideSwiper :options="jiazhiguan" />
   </BasicComponentSection>
 
   <BasicComponentSection
-    title="「亚华保障」"
+    title="亚华保障"
     desc="确保员工在全球市场上享有富有竞争力的薪酬和多元福利体系"
   >
     <Grid columns="3" item-width="41.8rem" gap="3.2rem">
@@ -52,7 +52,7 @@
   </BasicComponentSection>
 
   <BasicComponentSection
-    title="「亚华关怀」"
+    title="亚华关怀"
     desc="落实落细多样关怀，持续提高每一位员工的获得感和幸福感"
   >
     <CardSwiper :options="guanhuai" />

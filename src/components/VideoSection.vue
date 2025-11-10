@@ -3,7 +3,7 @@
     <Swiper.Container
       ref="swiperRef"
       :interval="8000"
-      :pause-on-hover="false"
+      :pause-on-hover="true"
       style="height: 100vh"
       @change="
         (index) => {

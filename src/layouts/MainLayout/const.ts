@@ -1,15 +1,15 @@
 export const menus = [
   {
     name: '走进亚华',
-    href: ''
+    href: '/about'
   },
   {
     name: '荣誉资质',
-    href: ''
+    href: '/honor'
   },
   {
     name: '产品中心',
-    href: ''
+    href: '/product'
   },
   {
     name: '服务中心',
@@ -24,7 +24,7 @@ export const menus = [
 export const subMenus = [];
 
 export const footerLinks = [
-  { name: '公司简介', href: '' },
-  { name: '荣誉资质', href: '' },
+  { name: '公司简介', href: '/yahua/about' },
+  { name: '荣誉资质', href: '/yahua/honor' },
   { name: '联系我们', href: '' }
 ];

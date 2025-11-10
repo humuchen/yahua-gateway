@@ -6,7 +6,7 @@
           <div class="section-title">
             <span class="simple-text section-text-title">{{ title }}</span>
           </div>
-          <span class="simple-text desc">
+          <span class="simple-text desc" v-show="desc">
             {{ desc }}
           </span>
 
@@ -20,7 +20,7 @@
 <script setup lang="ts">
 defineProps<{
   title: string;
-  desc: string;
+  desc?: string;
 }>();
 </script>
 
@@ -71,7 +71,7 @@ defineProps<{
 
   .simple-text {
     text-align: center;
-    font-size: 4.8rem;
+    font-size: 3.8rem;
     font-weight: bolder;
     font-style: initial;
     text-decoration: initial;
