@@ -4,7 +4,7 @@
       <VideoSection />
     </header>
     <main class="main">
-      <ImageSphere @image-click="openImage" />
+      <ImageSphere :images="images" @image-click="openImage" />
     </main>
     <ImageModal
       v-if="modalVisible"
@@ -19,6 +19,7 @@ import VideoSection from '@/components/VideoSection.vue';
 import ImageSphere from '@/components/ImageSphere.vue';
 import ImageModal from '@/components/ImageModal.vue';
 import { ref } from 'vue';
+import { images } from './resources';
 
 const modalVisible = ref(false);
 const modalSrc = ref('');

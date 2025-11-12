@@ -2,25 +2,15 @@
   <div ref="container" class="three-container"></div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import gsap from 'gsap';
-import { onMounted, ref, watch, defineEmits } from 'vue';
-import img1 from '@/assets/images/img1.jpg';
-import img2 from '@/assets/images/img2.jpg';
-import img3 from '@/assets/images/img3.jpg';
-import img4 from '@/assets/images/img4.jpg';
-import img5 from '@/assets/images/img5.jpg';
-import img6 from '@/assets/images/img6.jpg';
-import img7 from '@/assets/images/img7.jpg';
-import img8 from '@/assets/images/img8.jpg';
-import img9 from '@/assets/images/img9.jpg';
-import img10 from '@/assets/images/img10.jpg';
+import { onMounted, ref, defineEmits } from 'vue';
 
-const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
+const props = defineProps<{ images: Array<String> }>();
 
-const container = ref(null);
+const container = ref<any>(null);
 const emit = defineEmits(['image-click']);
 const sphereGroup = new THREE.Group();
 
@@ -42,11 +32,11 @@ onMounted(() => {
 
   // 多张图片纹理
   const textureLoader = new THREE.TextureLoader();
-  const imageCount = 50;
+  const imageCount = 80;
   const radius = 100;
 
   for (let i = 0; i < imageCount; i++) {
-    const texture = textureLoader.load(images[i % images.length]);
+    const texture = textureLoader.load(props.images[i % props.images.length]);
     const material = new THREE.MeshBasicMaterial({ map: texture });
     const geometry = new THREE.PlaneGeometry(20, 20);
     const mesh = new THREE.Mesh(geometry, material);
@@ -71,7 +61,7 @@ onMounted(() => {
   const raycaster = new THREE.Raycaster();
   const mouse = new THREE.Vector2();
 
-  function onClick(event) {
+  function onClick(event: MouseEvent) {
     const rect = renderer.domElement.getBoundingClientRect();
     mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
     mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
